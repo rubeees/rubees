@@ -916,12 +916,14 @@ font-size: 1.5em;
   .bouquet-card,
   .shop .bouquet-card {
     width: 30% !important;
+    text-align: center !important;
     
   }
 
   .shop .bouquet-card img {
     height: 110px;
     width: 110px;
+    align-items: center;
   }
 
   #order input,
