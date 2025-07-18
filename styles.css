@@ -768,6 +768,7 @@ font-size: 1.5em;
     padding: 10px;
   }
 
+  
   .logo-title {
     margin-bottom: 10px;
   }
@@ -875,6 +876,7 @@ font-size: 1.5em;
 
   .subtag {
     font-size: 0.95rem;
+    width: 100%;
   }
 
   .features li {
@@ -921,8 +923,8 @@ font-size: 1.5em;
   }
 
   .shop .bouquet-card img {
-    height: 110px;
-    width: 110px;
+    width: 100%;
+    height: 40%;
     align-items: center;
   }
 
