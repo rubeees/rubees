@@ -533,22 +533,32 @@ bouquetTypesContainer.scrollIntoView({ behavior: "smooth" });
 </script>
 
 <div id="overlay" class="overlay"></div>
+
 <script>
-  const hamburger = document.querySelector('.hamburger'); // tumhara button
-const sideMenu = document.querySelector('.side-menu');  // tumhara nav
-const overlay = document.getElementById('overlay');
+  const hamburger = document.querySelector('.hamburger'); 
+  const sideMenu = document.querySelector('.side-menu');  
+  const overlay = document.getElementById('overlay');
 
-hamburger.addEventListener('click', () => {
-  sideMenu.classList.toggle('open'); // ya jo bhi class lagti
-  overlay.style.display = sideMenu.classList.contains('open') ? 'block' : 'none';
-});
+  hamburger.addEventListener('click', () => {
+    sideMenu.classList.toggle('open');
+    overlay.style.display = sideMenu.classList.contains('open') ? 'block' : 'none';
+  });
 
-overlay.addEventListener('click', () => {
-  sideMenu.classList.remove('open');
-  overlay.style.display = 'none';
-});
+  overlay.addEventListener('click', () => {
+    sideMenu.classList.remove('open');
+    overlay.style.display = 'none';
+  });
 
+  // 👇 New Code: Jab menu ka koi link click ho to menu + overlay dono band
+  const menuLinks = document.querySelectorAll('.side-menu a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      sideMenu.classList.remove('open');
+      overlay.style.display = 'none';
+    });
+  });
 </script>
+
 
 </body>
 <script src="script.js"></script>
