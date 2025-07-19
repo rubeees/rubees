@@ -9,6 +9,7 @@ body {
   background-color: #fff5f8;
   color: #882f4e;
   margin-top: 50px;
+  overflow-x: hidden;
 }
 h1, h2, h3, .logo {
   font-family: 'Great Vibes', cursive;
@@ -75,7 +76,9 @@ h2{
 /* ===== HERO SECTION ===== */
 .hero {
   position: relative;
-  background: linear-gradient(to bottom, #ffe6ee, #f8aec8);
+  background: url("back.jpeg");
+   background-size: cover;
+  background-attachment: fixed; 
   padding: 80px 30px 120px;
   text-align: center;
 }
@@ -309,6 +312,7 @@ h2{
 /* ===== ORDER SECTION ===== */
 #order {
   background: #fff5f8;
+  border-top: 2px solid #ffc0cb;
   padding: 60px 20px;
   text-align: center;
 }
@@ -863,6 +867,8 @@ font-size: 1.5em;
 
 .hero{
   background: url("back.jpeg");
+     background-size: cover;
+  background-attachment: fixed; 
 }
 
 
