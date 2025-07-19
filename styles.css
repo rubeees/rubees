@@ -78,7 +78,6 @@ h2{
   position: relative;
   background: url("back.jpeg");
    background-size: cover;
-  background-attachment: fixed; 
   padding: 80px 30px 120px;
   text-align: center;
 }
@@ -868,7 +867,6 @@ font-size: 1.5em;
 .hero{
   background: url("back.jpeg");
      background-size: cover;
-  background-attachment: fixed; 
 }
 
 
