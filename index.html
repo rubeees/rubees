@@ -271,6 +271,7 @@
         <input type="file" name="Payment Receipt" accept="image/*,.pdf" required />
       </label>
     </fieldset>
+<input type="hidden" id="bouquetsGenerated" value="no" />
 
     <br>
     <button type="submit">📩 Place Order</button>
@@ -310,7 +311,7 @@
 
       const defaultOption = document.createElement("option");
       defaultOption.textContent = "Select an option";
-      select.required = true;
+
 
       defaultOption.value = "";
       select.appendChild(defaultOption);
@@ -327,6 +328,9 @@
       bouquetTypesContainer.appendChild(select);
       bouquetTypesContainer.appendChild(document.createElement("br"));
     }
+
+    document.getElementById("bouquetsGenerated").value = "yes";
+
 bouquetTypesContainer.scrollIntoView({ behavior: "smooth" });
 
     updatePriceAndTotal();
@@ -356,15 +360,23 @@ bouquetTypesContainer.scrollIntoView({ behavior: "smooth" });
   }
 
   function validateForm() {
-    const selects = document.querySelectorAll('#bouquet-types-container select');
-    for (let s of selects) {
-      if (s.value === "") {
-        alert("Please select all bouquet types.");
-        return false;
-      }
-    }
-    return true;
+  const bouquetsGenerated = document.getElementById("bouquetsGenerated").value;
+
+  if (bouquetsGenerated !== "yes") {
+    alert("Please click 'Generate Bouquet Options' before placing the order.");
+    return false;
   }
+
+  const selects = document.querySelectorAll('#bouquet-types-container select');
+  for (let s of selects) {
+    if (s.value === "") {
+      alert("Please select all bouquet types.");
+      return false;
+    }
+  }
+  return true;
+}
+
 </script>
 
 
